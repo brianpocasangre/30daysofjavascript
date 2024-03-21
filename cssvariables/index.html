@@ -34,24 +34,53 @@
 
       <label for="base">Base Color</label>
       <input id="base" type="color" name="base" value="#ffc600" />
-
-      <style>
-        body {
-          text-align: center;
-          background: #193549;
-          color: white;
-          font-family: 'helvetica neue', sans-serif;
-          font-weight: 100;
-          font-size: 50px;
-        }
-        .controls {
-          margin-bottom: 50px;
-        }
-
-        input {
-          width: 100px;
-        }
-      </style>
     </div>
+    <img src="https://source.unsplash.com/7bwQXzbF6KE/800x500" alt="" />
+    <style>
+      :root {
+        --base: #ffc600;
+        --spacing: 10px;
+        --blur: 10px;
+      }
+
+      img {
+        padding: var(--spacing);
+        background: var(--base);
+        filter: blur(var(--blur));
+      }
+      /* misc styles, nothing to do with CSS Variables */
+      body {
+        text-align: center;
+        background: #193549;
+        color: white;
+        font-family: 'helvetica neue', sans-serif;
+        font-weight: 100;
+        font-size: 50px;
+      }
+      .controls {
+        margin-bottom: 50px;
+      }
+
+      input {
+        width: 100px;
+      }
+    </style>
+
+    <script>
+      const inputs = document.querySelectorAll('.controls input');
+
+      function handelUpdate() {
+        const suffix = this.dataset.sizing || '';
+        document.documentElement.style.setProperty(
+          `--${this.name}`,
+          this.value + suffix
+        );
+      }
+
+      inputs.forEach((input) => input.addEventListener('change', handelUpdate));
+      inputs.forEach((input) =>
+        input.addEventListener('mousemove', handelUpdate)
+      );
+    </script>
   </body>
 </html>
