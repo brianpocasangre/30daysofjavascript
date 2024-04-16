@@ -1,0 +1,14 @@
+{
+  "name": "webcam",
+  "version": "1.0.0",
+  "description": "30 Days Of JavaScipt WebCam Project",
+  "main": "scripts.js",
+  "scripts": {
+    "start": "browser-sync start --server --files \"*.css, *.html, *.js\""
+  },
+  "author": "Brian Pocasangre",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2"
+  }
+}
