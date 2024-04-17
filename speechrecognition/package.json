@@ -1,0 +1,14 @@
+{
+  "name": "speechrecognition",
+  "version": "1.0.0",
+  "description": "Speech Recognition project from 30daysofjavascript by wesbos",
+  "main": "scripts.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brian Pocasangre",
+  "license": "ISC",
+  "dependencies": {
+    "browser-sync": "^3.0.2"
+  }
+}
