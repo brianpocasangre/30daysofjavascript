@@ -4,7 +4,7 @@
   "description": "Speech Recognition project from 30daysofjavascript by wesbos",
   "main": "scripts.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "browser-sync start --server --files \"*.css, *.html, *.js\""
   },
   "author": "Brian Pocasangre",
   "license": "ISC",
